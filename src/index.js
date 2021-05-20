@@ -87,7 +87,7 @@ export function parseList(list, opts = {}) {
 export function parseMap(map, opts = {}) {
   return `(${Object.keys(map)
     .filter(key => isValidKey(key))
-    .map(key => `${opts.convertCase ? toKebabCase(key) : key}: ${parseValue(map[key], opts)}`)
+    .map(key => `"${opts.convertCase ? toKebabCase(key) : key}": ${parseValue(map[key], opts)}`)
     .join(',')})`;
 }
 
