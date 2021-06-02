@@ -18,7 +18,8 @@
   "scripts": {
     "test": "mocha --require @babel/register",
     "compile": "mkdirp dist && babel src -d dist",
-    "prepublishOnly": "npm run compile"
+    "prepublishOnly": "npm run compile",
+    "prepare": "npm run compile"
   },
   "peerDependencies": {
     "node-sass": ">=3.5.3"
